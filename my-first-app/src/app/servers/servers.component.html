@@ -17,6 +17,11 @@
   [(ngModel)]="serverName"
 >
 <p>Server created with server name is: {{ getServerName() }} </p>
+<p>
+  From the above 2 way data binding example,
+  you can see that the default value of the server name is displayed on
+  both the input text area and in the &lt;p&gt; tag
+</p>
 <hr>
 <button class="btn btn-primary"
         [disabled]="!allowNewServer"

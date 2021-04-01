@@ -2,6 +2,10 @@
         [disabled]="!allowNewServer">
   Add Server
 </button>
+<p [innerText]="getAllowNewServer()"></p>
+<p>
+  Initial state of allowNewServer = {{ getAllowNewServer() }}
+</p>
 <hr>
 <app-server></app-server>
 <app-server></app-server>

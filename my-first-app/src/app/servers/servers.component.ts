@@ -27,4 +27,8 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getAllowNewServer () {
+    return this.allowNewServer;
+  }
+
 }

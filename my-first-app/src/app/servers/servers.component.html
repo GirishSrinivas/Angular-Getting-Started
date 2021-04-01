@@ -1,3 +1,12 @@
+<label>Server Name</label>
+<label>
+  <input
+    text="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)"
+  >
+</label>
+<p></p>
 <button class="btn btn-primary"
         [disabled]="!allowNewServer"
         (click)="onCreateServer()" >
@@ -7,7 +16,7 @@
 <p>
   Initial state of allowNewServer = {{ getAllowNewServer() }}
 </p>
-<p> {{ serverCreationStatus }} </p>
+<p> {{ serverCreationStatus }} and the server name is: {{ getServerName() }} </p>
 <hr>
 <app-server></app-server>
 <app-server></app-server>

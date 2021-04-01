@@ -1,11 +1,23 @@
-<label for="server_name">Server Name</label>
+<p>One way data binding example...!</p>
+<label for="server_name1">Server Name 1</label>
 <input
-  id="server_name"
+  id="server_name1"
   text="text"
   class="form-control"
   (input)="onUpdateServerName($event)"
 >
-<p></p>
+<p>Server created with server name is: {{ getServerName() }} </p>
+<hr>
+<p>2 way data binding example...!</p>
+<label for="server_name2">Server Name 2</label>
+<input
+  id="server_name2"
+  text="text"
+  class="form-control"
+  [(ngModel)]="serverName"
+>
+<p>Server created with server name is: {{ getServerName() }} </p>
+<hr>
 <button class="btn btn-primary"
         [disabled]="!allowNewServer"
         (click)="onCreateServer()" >
@@ -15,7 +27,7 @@
 <p>
   Initial state of allowNewServer = {{ getAllowNewServer() }}
 </p>
-<p> {{ serverCreationStatus }} and the server name is: {{ getServerName() }} </p>
+<p> {{ serverCreationStatus }}</p>
 <hr>
 <app-server></app-server>
 <app-server></app-server>

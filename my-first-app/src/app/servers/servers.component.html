@@ -1,11 +1,10 @@
-<label>Server Name</label>
-<label>
-  <input
-    text="text"
-    class="form-control"
-    (input)="onUpdateServerName($event)"
-  >
-</label>
+<label for="server_name">Server Name</label>
+<input
+  id="server_name"
+  text="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"
+>
 <p></p>
 <button class="btn btn-primary"
         [disabled]="!allowNewServer"
